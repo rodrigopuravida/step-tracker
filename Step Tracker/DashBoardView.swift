@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DashBoardView.swift
 //  Step Tracker
 //
 //  Created by Rodrigo Carballo on 5/2/24.
@@ -21,7 +21,7 @@ enum HealthMetricContext: CaseIterable, Identifiable {
   }
 }
 
-struct ContentView: View {
+struct DashBoardView: View {
 
   @State private var selectedStat: HealthMetricContext = .steps
   var isSteps : Bool { selectedStat == .steps}
@@ -89,7 +89,7 @@ struct ContentView: View {
           .padding()
           .navigationTitle("Dashboard")
           .navigationDestination(for: HealthMetricContext.self) { metric in
-            Text(metric.title)
+            HealthDataListView(metric: metric)
 
           }
 
@@ -101,5 +101,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    DashBoardView()
 }
