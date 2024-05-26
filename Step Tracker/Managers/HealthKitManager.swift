@@ -67,12 +67,12 @@ import Observation
   }
 
 
-  /*
+/*
    func addSimulatorData() async {
 
    var mockSamples: [HKQuantitySample] = []
 
-   for i in 0..<28 {
+   for i in 0..<9 {
    let stepQuantity = HKQuantity(unit: .count(), doubleValue: .random(in: 4_000...20_000))
    let weightQuantity = HKQuantity(unit: .pound(), doubleValue: .random(in: (160 + Double(i/3)...165 + Double(i/3))))
 
@@ -89,7 +89,8 @@ import Observation
    try! await store.save(mockSamples)
    print("👮🏻‍♂️Dummy Data sent up")
    }
-   */
+ */
+
 
 
 }
