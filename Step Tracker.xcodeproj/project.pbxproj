@@ -20,6 +20,7 @@
 		48A41D0B2BF156F600A24ACE /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A41D0A2BF156F600A24ACE /* HealthKitManager.swift */; };
 		48C224302BEDD39100AC47F9 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C2242F2BEDD39100AC47F9 /* HealthKitPermissionPrimingView.swift */; };
 		48DA57722BFE87F1009701BA /* StepBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA57712BFE87F1009701BA /* StepBarChart.swift */; };
+		48FDF6B02C04F08400313E5B /* StepPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDF6AF2C04F08400313E5B /* StepPieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		48A41D0A2BF156F600A24ACE /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		48C2242F2BEDD39100AC47F9 /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
 		48DA57712BFE87F1009701BA /* StepBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBarChart.swift; sourceTree = "<group>"; };
+		48FDF6AF2C04F08400313E5B /* StepPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				48DA57712BFE87F1009701BA /* StepBarChart.swift */,
 				484E45B12C02C6840039DECB /* ChartMath.swift */,
 				484E45B32C02C6B40039DECB /* ChartDataTypes.swift */,
+				48FDF6AF2C04F08400313E5B /* StepPieChart.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				484E45B22C02C6840039DECB /* ChartMath.swift in Sources */,
 				480960362BF94E4700893B62 /* HealthMetric.swift in Sources */,
 				484E45B42C02C6B40039DECB /* ChartDataTypes.swift in Sources */,
+				48FDF6B02C04F08400313E5B /* StepPieChart.swift in Sources */,
 				484E45B72C02CDF50039DECB /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
