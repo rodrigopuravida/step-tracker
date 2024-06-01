@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 enum HealthMetricContext: CaseIterable, Identifiable {
   case steps, weight
@@ -27,6 +28,7 @@ struct DashBoardView: View {
   @AppStorage("hasSeenPermissionPriming") private var hasSeenPermissionPriming = false
   @State private var isShowingPermissionPrimingSheet = false
   @State private var selectedStat: HealthMetricContext = .steps
+
   var isSteps : Bool { selectedStat == .steps}
 
   var body: some View {
@@ -41,55 +43,16 @@ struct DashBoardView: View {
           }
           .pickerStyle(.segmented)
 
-          VStack{
-            NavigationLink(value: selectedStat){
-              HStack{
-                VStack(alignment: .leading){
-                  Label("Steps", systemImage: "figure.walk")
-                    .font(.title3.bold())
-                    .foregroundStyle(.pink)
+          StepBarChart(selectedStat: selectedStat, chartData: hkManager.stepData)
+          StepPieChart(chartData: ChartMath.averageWeekdayCount(for: hkManager.stepData))
 
-                  Text("Avg: 10k Steps")
-                    .font(.caption)
-                }
-                Spacer()
-
-                Image(systemName: "chevron.right")
-              }
-            }
-            .foregroundStyle(.secondary)
-            .padding(.bottom,12)
-
-            RoundedRectangle(cornerRadius: 12)
-              .foregroundStyle(.secondary)
-              .frame(height: 150)
-          }
-          .padding()
-          .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
-
-          VStack(alignment: .leading){
-            VStack(alignment: .leading){
-              Label("Averages", systemImage: "calendar")
-                .font(.title3.bold())
-                .foregroundStyle(.pink)
-
-              Text("Last 28 Days")
-                .font(.caption)
-                .foregroundStyle(.secondary)
-            }
-
-            .padding(.bottom,12)
-
-            RoundedRectangle(cornerRadius: 12)
-              .foregroundStyle(.secondary)
-              .frame(height: 240)
-          }
-          .padding()
-          .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
         }
       }
       .padding()
       .task{
+        //await hkManager.addSimulatorData()
+        await hkManager.fetchStepCount()
+        //ChartMath.averageWeekdayCount(for: hkManager.stepData)
         isShowingPermissionPrimingSheet = !hasSeenPermissionPriming
       }
       .navigationTitle("Dashboard")
@@ -104,6 +67,8 @@ struct DashBoardView: View {
     }
     .tint(isSteps  ? .pink : .indigo)
   }
+
+  
 }
 
 #Preview {
