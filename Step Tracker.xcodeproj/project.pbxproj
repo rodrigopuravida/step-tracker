@@ -22,6 +22,7 @@
 		48DA57722BFE87F1009701BA /* StepBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DA57712BFE87F1009701BA /* StepBarChart.swift */; };
 		48DB73752C0CCD6300711ABF /* WeightLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB73742C0CCD6300711ABF /* WeightLineChart.swift */; };
 		48DB73782C0CD07E00711ABF /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB73772C0CD07E00711ABF /* MockData.swift */; };
+		48DB737A2C17FDF400711ABF /* WeightDiffBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB73792C17FDF300711ABF /* WeightDiffBarChart.swift */; };
 		48FDF6B02C04F08400313E5B /* StepPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDF6AF2C04F08400313E5B /* StepPieChart.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		48DA57712BFE87F1009701BA /* StepBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBarChart.swift; sourceTree = "<group>"; };
 		48DB73742C0CCD6300711ABF /* WeightLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLineChart.swift; sourceTree = "<group>"; };
 		48DB73772C0CD07E00711ABF /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		48DB73792C17FDF300711ABF /* WeightDiffBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightDiffBarChart.swift; sourceTree = "<group>"; };
 		48FDF6AF2C04F08400313E5B /* StepPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 				484E45B12C02C6840039DECB /* ChartMath.swift */,
 				484E45B32C02C6B40039DECB /* ChartDataTypes.swift */,
 				48FDF6AF2C04F08400313E5B /* StepPieChart.swift */,
+				48DB73792C17FDF300711ABF /* WeightDiffBarChart.swift */,
 				48DB73742C0CCD6300711ABF /* WeightLineChart.swift */,
 			);
 			path = Charts;
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4851655F2BE7FE4800907223 /* HealthDataListView.swift in Sources */,
+				48DB737A2C17FDF400711ABF /* WeightDiffBarChart.swift in Sources */,
 				483C20BE2BE4A80C008C4DF2 /* DashBoardView.swift in Sources */,
 				48DA57722BFE87F1009701BA /* StepBarChart.swift in Sources */,
 				48DB73782C0CD07E00711ABF /* MockData.swift in Sources */,
